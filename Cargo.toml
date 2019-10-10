@@ -1,0 +1,12 @@
+[package]
+name = "proc-macro-reexport"
+version = "0.1.0"
+edition = "2018"
+
+[dependencies]
+# Renaming here causes ICE
+my = { package = "my-proc-macro", path = "./macro" }
+# Below code works fine
+#my-proc-macro = { path = "./macro" }
+
+[features]
